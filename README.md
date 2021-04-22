@@ -9,9 +9,9 @@
 
 ### Description
 
-<p>This is a css's challenge made by <a href="https://www.instagram.com/papodedev/">@papodedev</a> on instagram's and implemented by me @victoriacesar.</p>
+<p>This is a css's challenge made by <a href="https://www.instagram.com/papodedev/">@papodedev</a> on instagram's and implemented by me <a href="https://github.com/victoriacesar">@victoriacesar</a>.</p>
 <p>For this project, I included a dark mode button, when you click the button the layout change colors and stores your option in local storage, and I also added an input for the email to get in contact.</p>
-<a href="#">Click here to see the deploy</a>
+<a href="https://personal-link-tree.vercel.app/">Click here to see the deploy</a>
 
 ### Technologies
 
