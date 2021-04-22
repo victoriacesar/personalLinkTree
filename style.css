@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
+}
+
+html {
+  --font: "Open Sans", sans-serif;
+  --first-color: #f6e8ea;
+  --second-color: #ef626c;
+  --third-color: #22181c;
+  --color-text: #333333;
+  --gray-color: rgba(220, 220, 220, 0.35);
+  --white-color: #fff;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--first-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* button dark mode */
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.toggle small {
+  display: block;
+  font-size: 0.7rem;
+  opacity: 70%;
+  color: var(--color-text);
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 52px;
+  height: 27px;
+  background: grey;
+  margin: 3px;
+  float: left;
+  border-radius: 100px;
+  position: relative;
+}
+
+label::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--white-color);
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background-color: var(--second-color);
+}
+
+input:checked + label::after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 45px;
+}
+/* --------------------- */
+
+.container {
+  width: 80%;
+  /* background-color: #fff; */
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin: 20px; */
+  padding: 0 0 10px 0;
+}
+
+.profile-info img {
+  width: 120px;
+  border-radius: 100%;
+}
+
+.profile-info h2 {
+  font-size: 1.2rem;
+  color: var(--second-color);
+  font-weight: 800;
+}
+
+.profile-info p {
+  color: var(--color-text);
+  font-size: 0.9rem;
+}
+
+.profile-info p:first-of-type {
+  font-size: 0.8rem;
+}
+
+.contentBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  padding: 15px;
+  background-color: var(--white-color);
+  border-radius: 10px 50px 10px 10px;
+  position: relative;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  background-color: var(--gray-color);
+  padding: 3px;
+  border-radius: 3rem;
+  position: absolute;
+  top: -25px;
+}
+
+.social-media a i {
+  font-size: 2rem;
+  color: var(--second-color);
+  background-color: var(--white-color);
+  padding: 0.7rem;
+  border-radius: 100%;
+  margin: 5px;
+}
+
+.contentBox-info {
+  /* background-color: darkolivegreen; */
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  width: 100%;
+}
+
+.contentBox-info a {
+  padding: 10px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--color-text);
+  background-color: var(--white-color);
+  border-radius: 30px;
+  margin-top: 10px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.contentBox-info a:hover {
+  opacity: 80%;
+}
+
+.contentBox-email {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.contentBox-email input {
+  padding: 10px;
+  border: 2px solid var(--first-color);
+  border-radius: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  background-color: var(--white-color);
+}
+
+.contentBox-email input:focus {
+  outline: none;
+  /* border-radius: 30px; */
+  border: 2px solid gray;
+}
+
+.contentBox-email button {
+  width: 20%;
+  align-self: flex-end;
+  margin-top: 5px;
+  border-radius: 5px;
+  outline: none;
+  background: var(--first-color);
+  border: 2px solid var(--fourth-color);
+  padding: 5px;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.contentBox-email button:hover {
+  color: var(--second-color);
+}
+
+.contentBox-email input::placeholder {
+  color: var(--second-color);
+}
+
+@media (min-width: 850px) {
+  .container {
+    width: 50%;
+  }
+}
